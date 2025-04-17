@@ -1,3 +1,7 @@
+# this is my first project : 
+# author : abhishek singh (@digiware1)
+
+
 import speech_recognition as sr
 import webbrowser
 import pyttsx3
