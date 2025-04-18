@@ -1,0 +1,20 @@
+# Generate requirements.txt from known dependencies
+requirements = [
+    "SpeechRecognition",
+    "webbrowser",     # Standard lib; won't be included
+    "pyttsx3",
+    "requests",
+    "openai",
+    "gTTS",
+    "pygame"
+]
+
+# Filter out standard libraries like webbrowser
+requirements = [r for r in requirements if r not in ['webbrowser']]
+
+# Write to requirements.txt
+requirements_txt_path = os.path.join(extract_path, "first_project", "requirements.txt")
+with open(requirements_txt_path, "w") as f:
+    f.write("\n".join(requirements))
+
+requirements  # Show list of requirements added
